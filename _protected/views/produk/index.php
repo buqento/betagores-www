@@ -29,7 +29,10 @@ $this->params['breadcrumbs'][] = $this->title;
             //'kategori_id',
             //'created_at',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{view}'
+            ],
         ],
     ]); ?>
 </div>
