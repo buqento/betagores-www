@@ -20,11 +20,21 @@ $this->params['breadcrumbs'][] = $this->title;
 
             // 'id',
             'tanggal',
-            'pengguna_id',
-            'produk_id',
+            [
+                'attribute' => 'pengguna_id',
+                'value' => function($data){
+                    return $data->pengguna->nama_lengkap;
+                }
+            ],
+            [
+                'attribute' => 'produk_id',
+                'value' => function($data){
+                    return $data->produk->nama;
+                }
+            ],
             'jumlah',
             'total_bayar',
-            'status',
+            // 'status',
             'keterangan',
 
             // ['class' => 'yii\grid\ActionColumn'],

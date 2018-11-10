@@ -47,12 +47,22 @@ class Pesanan extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'tanggal' => 'Tanggal',
-            'pengguna_id' => 'Pengguna ID',
-            'produk_id' => 'Produk ID',
+            'pengguna_id' => 'Pelanggan',
+            'produk_id' => 'Produk',
             'jumlah' => 'Jumlah',
             'total_bayar' => 'Total Bayar',
             'status' => 'Status',
             'keterangan' => 'Keterangan',
         ];
+    }
+
+    public function getPengguna()
+    {
+        return $this->hasOne(Pengguna::classname(), ['id' => 'pengguna_id']);
+    }
+
+    public function getProduk()
+    {
+        return $this->hasOne(Produk::classname(), ['id' => 'produk_id']);
     }
 }
