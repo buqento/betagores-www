@@ -10,17 +10,9 @@
                 'items' => [
                     ['label' => 'Dashboard', 'icon' => 'dashboard', 'url' => ['/site']],
                     ['label' => 'Pesanan', 'icon' => 'list', 'url' => ['/pesanan']],
-                    ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
-                    [
-                        'label' => 'produk',
-                        'icon' => 'heart-o',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => 'Daftar Produk', 'icon' => 'circle-o', 'url' => ['/produk'],],
-                            ['label' => 'Tambah Produk', 'icon' => 'circle-o', 'url' => ['/produk/create'],],
-                        ],
-                    ],
+                    ['label' => 'produk', 'icon' => 'heart-o', 'url' => ['/produk'],],
                     ['label' => 'Pengguna', 'icon' => 'users', 'url' => ['/pengguna']],
+                    // ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
 
                 ],
             ]
