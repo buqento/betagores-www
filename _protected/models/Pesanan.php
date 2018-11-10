@@ -63,6 +63,6 @@ class Pesanan extends \yii\db\ActiveRecord
 
     public function getProduk()
     {
-        return $this->hasOne(Produk::classname(), ['id' => 'produk_id']);
+        return $this->hasOne(Produk::classname(), ['kode' => 'produk_id']);
     }
 }
