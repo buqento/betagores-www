@@ -47,6 +47,11 @@ class PesananSearch extends Pesanan
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort' => [
+                'defaultOrder' => [
+                    'tanggal' => SORT_DESC
+                ]
+            ]
         ]);
 
         $this->load($params);
