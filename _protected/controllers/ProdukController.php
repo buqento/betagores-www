@@ -100,7 +100,6 @@ class ProdukController extends Controller
     {
         $model = $this->findModel($id);
 
-        $model->kode = $this->createRandom(6);
         $model->kategori_id = 1;
         $model->status = 1;
 
